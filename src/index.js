@@ -1,4 +1,5 @@
 const express = require("express");
+const os = require("os");
 const fs = require("fs");
 
 const app = express();
@@ -42,7 +43,7 @@ if (require.main === module) {
     // When this script is run as the entry point, starts the HTTP server.
     //
     app.listen(PORT, () => {
-        console.log(`Microservice online.`);
+        console.log(`ch8eg2: ${os.hostname()} ${os.platform()}: Microservice listening on port ${PORT}, point your browser at http://localhost:${PORT}/video`);
     });
 }
 else {
